@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前端小码农,没事看看源码,整整小程序,用用vue,研究研究webpack,学习学习node.js">
+<meta name="keywords" content="前端工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="佛系编程">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="佛系编程">
+<meta property="og:description" content="前端小码农,没事看看源码,整整小程序,用用vue,研究研究webpack,学习学习node.js">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="佛系编程">
+<meta name="twitter:description" content="前端小码农,没事看看源码,整整小程序,用用vue,研究研究webpack,学习学习node.js">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>佛系编程</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">佛系编程</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">缘分到了,代码自然就躺好了</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/23/jQuery源码分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NicolasSingle">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佛系编程">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/23/jQuery源码分析/" itemprop="url">jQuery源码分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-23T11:34:10+08:00">
+                2018-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="解析jQuery2-0-3"><a href="#解析jQuery2-0-3" class="headerlink" title="解析jQuery2.0.3"></a>解析jQuery2.0.3</h1><ul>
+<li>第52行<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class2type = &#123;&#125;,</span><br><span class="line">core_deletedIds = [],</span><br><span class="line">core_concat = core_deletedIds.concat,</span><br><span class="line">core_push = core_deletedIds.push,</span><br><span class="line">core_slice = core_deletedIds.slice,</span><br><span class="line">core_indexOf = core_deletedIds.indexOf,</span><br><span class="line">core_toString = class2type.toString,</span><br><span class="line">core_hasOwn = class2type.hasOwnProperty,</span><br><span class="line">core_trim = core_version.trim</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="利用了原生的很多方法-这里直接偷梁换柱-例如"><a href="#利用了原生的很多方法-这里直接偷梁换柱-例如" class="headerlink" title="利用了原生的很多方法,这里直接偷梁换柱,例如"></a>利用了原生的很多方法,这里直接偷梁换柱,例如</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toArray: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> core_slice.call( <span class="keyword">this</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向"><a href="#那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向" class="headerlink" title="那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向"></a>那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向</h1><h2 id="关于call的用法"><a href="#关于call的用法" class="headerlink" title="关于call的用法"></a>关于call的用法</h2><p>类似bind能够改变this的指向<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">name</span>:<span class="string">'NicolasSingle'</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line">fn.call(obj);</span><br></pre></td></tr></table></figure></p>
+<p>这样首先寻找call方法,最后通过原型链找到call,然后让call执行,执行call的时候,让fn的this变成传入的第一个参数obj,以此改变this指向。</p>
+<h1 id="经典例子："><a href="#经典例子：" class="headerlink" title="经典例子："></a>经典例子：</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn1.call(fn2); <span class="comment">// 1</span></span><br><span class="line">fn1.call.call(fn2); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>这里第一个结果,依旧是执行fn1虽然改变了fn1的this指向,并且是指向了fn2,然后执行fn1,输出1,没毛病<br>这里第二个结果,已经是先执行改变了fn1.call的this指向,并且指向了fn2,然后也就是说fn1.call再执行,执行的时候里边的this()方法,this()方法 就是指向的this方法,那就是执行fn2</p>
+<h1 id="hack的意思是兼容"><a href="#hack的意思是兼容" class="headerlink" title="hack的意思是兼容"></a>hack的意思是兼容</h1><p>css的hack手法一般都是对不同浏览器进行不同的hack处理 就是兼容处理,JavaScript也有很多hack方法,举几个有趣的例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:<span class="built_in">document</span>.body.contentEditable=<span class="string">'true'</span>;<span class="built_in">document</span>.designMode=<span class="string">'on'</span>; <span class="keyword">void</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>放到控制台输入这段代码,就可以直接在浏览器编辑网页内容<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:R=<span class="number">0</span>; x1=<span class="number">.1</span>; y1=<span class="number">.05</span>; x2=<span class="number">.25</span>; y2=<span class="number">.24</span>; x3=<span class="number">1.6</span>; y3=<span class="number">.24</span>; x4=<span class="number">300</span>; y4=<span class="number">200</span>; x5=<span class="number">300</span>; y5=<span class="number">200</span>; DI=<span class="built_in">document</span>.images; DIL=DI.length; <span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(i=<span class="number">0</span>; i-DIL; i++)&#123;DIS=DI[ i ].style; DIS.position=<span class="string">'absolute'</span>; DIS.left=(<span class="built_in">Math</span>.sin(R*x1+i*x2+x3)*x4+x5)+<span class="string">"px"</span>; DIS.top=(<span class="built_in">Math</span>.cos(R*y1+i*y2+y3)*y4+y5)+<span class="string">"px"</span>&#125;R++&#125;setInterval(<span class="string">'A()'</span>,<span class="number">5</span>); <span class="keyword">void</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这段hack代码可以让网页中的图片舞动起来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> s,F,j,f,i;s=<span class="string">""</span>;F=<span class="built_in">document</span>.forms;<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;F.length;++j)&#123;f=F[j];<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;f.length;++i)&#123;<span class="keyword">if</span>(f[i].type.toLowerCase()==<span class="string">"password"</span>)s+=f[i].value+<span class="string">"\n"</span>;&#125;&#125;<span class="keyword">if</span>(s)alert(<span class="string">"Passwords in forms on this page:\n\n"</span>+s);<span class="keyword">else</span> alert(<span class="string">"There are no passwords in forms on this page."</span>);&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>这段hack代码可以显示password的内容,就是说可以看input密文的密码变明文</p>
+<h1 id="pushStack-入栈方法"><a href="#pushStack-入栈方法" class="headerlink" title="pushStack 入栈方法"></a>pushStack 入栈方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Take an array of elements and push it onto the stack</span></span><br><span class="line"><span class="comment">// (returning the new matched element set)</span></span><br><span class="line">pushStack: <span class="function"><span class="keyword">function</span>(<span class="params"> elems </span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Build a new jQuery matched element set</span></span><br><span class="line">	<span class="keyword">var</span> ret = jQuery.merge( <span class="keyword">this</span>.constructor(), elems );</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Add the old object onto the stack (as a reference)</span></span><br><span class="line">	ret.prevObject = <span class="keyword">this</span>;</span><br><span class="line">	ret.context = <span class="keyword">this</span>.context;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Return the newly-formed element set</span></span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法在jQuery中经常使用,官方翻译的意思大概是把一个数组元素放到一个栈里<br>this.constructor就是jQuery中的jQuery对象,他这种写法是将jQuery对象模拟成构造函数,他和被选中的数组进行合并,放到这个栈里使用。听上去很难理解，其实这个就是实现jQuery对象的链式操作的。</p>
+<h1 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.demoDiv'</span>).children(<span class="string">'span'</span>).css(<span class="string">"color"</span>,<span class="string">"#666"</span>);</span><br></pre></td></tr></table></figure>
+<p>这里的操作是实现的选中的demoDiv类标签,并对该标签的子标签,也就是span标签进行css样式更改</p>
+<h1 id="jQuery中的例子"><a href="#jQuery中的例子" class="headerlink" title="jQuery中的例子"></a>jQuery中的例子</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slice: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.pushStack( core_slice.apply( <span class="keyword">this</span>, <span class="built_in">arguments</span> ) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个jQuery中的slice的操作就是把原生的slice通过封装实现了jQuery的链式操作,并且结合上边的”借鸡下蛋”的骚操作,直接把原生和他的jQuery对象通过apply继承到了一起,很有意思。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/23/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NicolasSingle">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佛系编程">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/23/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-23T11:11:38+08:00">
+                2018-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">NicolasSingle</p>
+              <p class="site-description motion-element" itemprop="description">前端小码农,没事看看源码,整整小程序,用用vue,研究研究webpack,学习学习node.js</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NicolasSingle</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
