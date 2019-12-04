@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="解析jQuery2.0.3 第52行123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core_d">
+<meta name="description" content="解析jQuery2.0.3 第52行  123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core">
 <meta name="keywords" content="前端工程师">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery源码分析">
 <meta property="og:url" content="http://yoursite.com/2018/08/23/jQuery源码分析/index.html">
 <meta property="og:site_name" content="佛系编程">
-<meta property="og:description" content="解析jQuery2.0.3 第52行123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core_d">
+<meta property="og:description" content="解析jQuery2.0.3 第52行  123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-28T03:04:02.497Z">
+<meta property="og:updated_time" content="2019-10-21T08:44:46.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery源码分析">
-<meta name="twitter:description" content="解析jQuery2.0.3 第52行123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core_d">
+<meta name="twitter:description" content="解析jQuery2.0.3 第52行  123456789class2type = &amp;#123;&amp;#125;,core_deletedIds = [],core_concat = core_deletedIds.concat,core_push = core_deletedIds.push,core_slice = core_deletedIds.slice,core_indexOf = core">
 
 
 
@@ -300,12 +300,12 @@
       
 
       
-        <h1 id="解析jQuery2-0-3"><a href="#解析jQuery2-0-3" class="headerlink" title="解析jQuery2.0.3"></a>解析jQuery2.0.3</h1><ul>
-<li>第52行<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class2type = &#123;&#125;,</span><br><span class="line">core_deletedIds = [],</span><br><span class="line">core_concat = core_deletedIds.concat,</span><br><span class="line">core_push = core_deletedIds.push,</span><br><span class="line">core_slice = core_deletedIds.slice,</span><br><span class="line">core_indexOf = core_deletedIds.indexOf,</span><br><span class="line">core_toString = class2type.toString,</span><br><span class="line">core_hasOwn = class2type.hasOwnProperty,</span><br><span class="line">core_trim = core_version.trim</span><br></pre></td></tr></table></figure>
-</li>
+        <h2 id="解析jQuery2-0-3"><a href="#解析jQuery2-0-3" class="headerlink" title="解析jQuery2.0.3"></a>解析jQuery2.0.3</h2><ul>
+<li>第52行</li>
 </ul>
-<h1 id="利用了原生的很多方法-这里直接偷梁换柱-例如"><a href="#利用了原生的很多方法-这里直接偷梁换柱-例如" class="headerlink" title="利用了原生的很多方法,这里直接偷梁换柱,例如"></a>利用了原生的很多方法,这里直接偷梁换柱,例如</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toArray: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> core_slice.call( <span class="keyword">this</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向"><a href="#那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向" class="headerlink" title="那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向"></a>那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向</h1><h2 id="关于call的用法"><a href="#关于call的用法" class="headerlink" title="关于call的用法"></a>关于call的用法</h2><p>类似bind能够改变this的指向<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">name</span>:<span class="string">'NicolasSingle'</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line">fn.call(obj);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class2type = &#123;&#125;,</span><br><span class="line">core_deletedIds = [],</span><br><span class="line">core_concat = core_deletedIds.concat,</span><br><span class="line">core_push = core_deletedIds.push,</span><br><span class="line">core_slice = core_deletedIds.slice,</span><br><span class="line">core_indexOf = core_deletedIds.indexOf,</span><br><span class="line">core_toString = class2type.toString,</span><br><span class="line">core_hasOwn = class2type.hasOwnProperty,</span><br><span class="line">core_trim = core_version.trim</span><br></pre></td></tr></table></figure>
+<h2 id="利用了原生的很多方法-这里直接偷梁换柱-例如"><a href="#利用了原生的很多方法-这里直接偷梁换柱-例如" class="headerlink" title="利用了原生的很多方法,这里直接偷梁换柱,例如"></a>利用了原生的很多方法,这里直接偷梁换柱,例如</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toArray: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> core_slice.call( <span class="keyword">this</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向"><a href="#那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向" class="headerlink" title="那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向"></a>那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向</h2><h2 id="关于call的用法"><a href="#关于call的用法" class="headerlink" title="关于call的用法"></a>关于call的用法</h2><p>类似bind能够改变this的指向<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">name</span>:<span class="string">'NicolasSingle'</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line">fn.call(obj);</span><br></pre></td></tr></table></figure></p>
 <p>这样首先寻找call方法,最后通过原型链找到call,然后让call执行,执行call的时候,让fn的this变成传入的第一个参数obj,以此改变this指向。</p>
 <h1 id="经典例子："><a href="#经典例子：" class="headerlink" title="经典例子："></a>经典例子：</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn1.call(fn2); <span class="comment">// 1</span></span><br><span class="line">fn1.call.call(fn2); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 <p>这里第一个结果,依旧是执行fn1虽然改变了fn1的this指向,并且是指向了fn2,然后执行fn1,输出1,没毛病<br>这里第二个结果,已经是先执行改变了fn1.call的this指向,并且指向了fn2,然后也就是说fn1.call再执行,执行的时候里边的this()方法,this()方法 就是指向的this方法,那就是执行fn2</p>
@@ -352,6 +352,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/21/微信生态圈这点事儿(微信H5分享)/" rel="prev" title="微信生态圈这点事儿(微信H5分享)">
+                微信生态圈这点事儿(微信H5分享) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -428,7 +432,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -436,6 +440,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
@@ -465,7 +478,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解析jQuery2-0-3"><span class="nav-number">1.</span> <span class="nav-text">解析jQuery2.0.3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用了原生的很多方法-这里直接偷梁换柱-例如"><span class="nav-number">2.</span> <span class="nav-text">利用了原生的很多方法,这里直接偷梁换柱,例如</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向"><span class="nav-number">3.</span> <span class="nav-text">那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于call的用法"><span class="nav-number">3.1.</span> <span class="nav-text">关于call的用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典例子："><span class="nav-number">4.</span> <span class="nav-text">经典例子：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hack的意思是兼容"><span class="nav-number">5.</span> <span class="nav-text">hack的意思是兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pushStack-入栈方法"><span class="nav-number">6.</span> <span class="nav-text">pushStack 入栈方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#举个例子"><span class="nav-number">7.</span> <span class="nav-text">举个例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery中的例子"><span class="nav-number">8.</span> <span class="nav-text">jQuery中的例子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解析jQuery2-0-3"><span class="nav-number">1.</span> <span class="nav-text">解析jQuery2.0.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用了原生的很多方法-这里直接偷梁换柱-例如"><span class="nav-number">2.</span> <span class="nav-text">利用了原生的很多方法,这里直接偷梁换柱,例如</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那是相当的鸡贼啊-直接把原生的方法赋值过去-然后换上jq对象-成为自己的方法-从这里边能学到的东西就是call这个方法-能够改变this的指向"><span class="nav-number">3.</span> <span class="nav-text">那是相当的鸡贼啊,直接把原生的方法赋值过去,然后换上jq对象,成为自己的方法,从这里边能学到的东西就是call这个方法,能够改变this的指向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于call的用法"><span class="nav-number">4.</span> <span class="nav-text">关于call的用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典例子："><span class="nav-number"></span> <span class="nav-text">经典例子：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hack的意思是兼容"><span class="nav-number"></span> <span class="nav-text">hack的意思是兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pushStack-入栈方法"><span class="nav-number"></span> <span class="nav-text">pushStack 入栈方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#举个例子"><span class="nav-number"></span> <span class="nav-text">举个例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery中的例子"><span class="nav-number"></span> <span class="nav-text">jQuery中的例子</span></a></div>
             
 
           </div>
@@ -485,7 +498,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
